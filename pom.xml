@@ -56,10 +56,10 @@
         <aws-java-sdk-s3.version>1.12.40</aws-java-sdk-s3.version>
         <spring-cloud-starter-oauth2.version>2.2.5.RELEASE</spring-cloud-starter-oauth2.version>
         <docker-maven-plugin.version>1.2.2</docker-maven-plugin.version>
-        <sonar.exclusions>zlt-job/**/*, zlt-register/**/*, zlt-web/**/*</sonar.exclusions>
+        <sonar.exclusions>peak-job/**/*, peak-register/**/*, peak-web/**/*</sonar.exclusions>
         <docker.baseImage>openjdk:8-jre-alpine</docker.baseImage>
         <docker.volumes>/tmp</docker.volumes>
-        <docker.image.prefix>hub.zlt.com:8080/microservices-platform</docker.image.prefix>
+        <docker.image.prefix>hub.peak.com:8080/microservices-platform</docker.image.prefix>
         <docker.java.security.egd>-Djava.security.egd=file:/dev/./urandom</docker.java.security.egd>
         <docker.java.opts>-Xms128m -Xmx128m</docker.java.opts>
         <guava.version>20.0</guava.version>
@@ -102,57 +102,57 @@
             <!-- 自定义 starter -->
             <dependency>
                 <groupId>com.peak</groupId>
-                <artifactId>zlt-common-spring-boot-starter</artifactId>
+                <artifactId>peak-common-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.peak</groupId>
-                <artifactId>zlt-db-spring-boot-starter</artifactId>
+                <artifactId>peak-db-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.peak</groupId>
-                <artifactId>zlt-log-spring-boot-starter</artifactId>
+                <artifactId>peak-log-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.peak</groupId>
-                <artifactId>zlt-redis-spring-boot-starter</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.zlt</groupId>
-                <artifactId>zlt-swagger2-spring-boot-starter</artifactId>
+                <artifactId>peak-redis-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.peak</groupId>
-                <artifactId>zlt-loadbalancer-spring-boot-starter</artifactId>
+                <artifactId>peak-swagger2-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.peak</groupId>
-                <artifactId>zlt-auth-client-spring-boot-starter</artifactId>
+                <artifactId>peak-loadbalancer-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.peak</groupId>
-                <artifactId>zlt-sentinel-spring-boot-starter</artifactId>
+                <artifactId>peak-auth-client-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.peak</groupId>
-                <artifactId>zlt-config</artifactId>
+                <artifactId>peak-sentinel-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.peak</groupId>
-                <artifactId>zlt-common-core</artifactId>
+                <artifactId>peak-config</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.peak</groupId>
-                <artifactId>zlt-elasticsearch-spring-boot-starter</artifactId>
+                <artifactId>peak-common-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.peak</groupId>
+                <artifactId>peak-elasticsearch-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -201,7 +201,7 @@
             </dependency>
             <!-- swagger -->
             <dependency>
-                <groupId>com.github.zlt2000</groupId>
+                <groupId>com.github.peak2000</groupId>
                 <artifactId>swagger-butler-core</artifactId>
                 <version>${swagger.butler.version}</version>
             </dependency>
@@ -366,12 +366,12 @@
             </dependency>
             <dependency>
                 <groupId>com.peak</groupId>
-                <artifactId>zlt-oss-spring-boot-starter</artifactId>
+                <artifactId>peak-oss-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.peak</groupId>
-                <artifactId>zlt-zookeeper-spring-boot-starter</artifactId>
+                <artifactId>peak-zookeeper-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -486,21 +486,21 @@
 
     <modules>
         <!-- 公共 -->
-        <module>zlt-commons</module>
+        <module>peak-commons</module>
         <!-- 认证 -->
-        <module>zlt-uaa</module>
+        <module>peak-uaa</module>
         <!-- 网关 -->
-        <module>zlt-gateway</module>
+        <module>peak-gateway</module>
         <!-- 业务 -->
-        <module>zlt-business</module>
+        <module>peak-business</module>
         <!-- 前端 -->
-        <module>zlt-web</module>
+        <module>peak-web</module>
         <!-- 监控 -->
-        <module>zlt-monitor</module>
+        <module>peak-monitor</module>
         <!-- 配置 -->
-        <module>zlt-config</module>
+        <module>peak-config</module>
         <!-- demo -->
-        <module>zlt-demo</module>
+        <module>peak-demo</module>
         <module>peak-im</module>
     </modules>
 
@@ -514,9 +514,9 @@
     <developers>
         <developer>
             <name>LeTao Zhu</name>
-            <email>zltdiablo@163.com</email>
-            <organizationUrl>https://github.com/zlt2000</organizationUrl>
-            <url>https://blog.csdn.net/zlt2000</url>
+            <email>peakdiablo@163.com</email>
+            <organizationUrl>https://github.com/peak2000</organizationUrl>
+            <url>https://blog.csdn.net/peak2000</url>
         </developer>
     </developers>
 </project>
